@@ -1,19 +1,12 @@
-using Microsoft.EntityFrameworkCore;
-using MxFace.Fingerprint.SDK.Sample.Net.Components;
-using MxFace.Fingerprint.SDK.Sample.Net.Data.Contexts;
-using MxFace.Fingerprint.SDK.Sample.Net.Extensions;
+using MxFace.Iris.SDK.Sample.Net.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Add services to the container.
 builder.AddApplicationServices();
-
-//builder.AddApplicationServices();
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
 
 var app = builder.Build();
 
@@ -26,3 +19,4 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+
